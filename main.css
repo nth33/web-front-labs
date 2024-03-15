@@ -1,0 +1,21 @@
+body {
+    background-color: lightblue;
+    color: maroon;
+    font-family: Arial;
+    margin: 0px;
+}
+main{
+    background-color: blueviolet;
+    color: maroon;
+    font-family: Impact;
+}
+footer{
+    background-color: blueviolet;
+    color: maroon;
+    font-family: Impact;
+}
+header{
+    background-color: blueviolet;
+    color: maroon;
+    font-family: Impact;
+}
