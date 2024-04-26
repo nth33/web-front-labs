@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юрин Семён Андреевич. Комикс</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon/favicon-16x16.png">
+    <link rel="icon" href="../favicon/favicon-32x32.png">
+</head>
+<style>
+    .container {
+            position: relative;
+        }
+
+    .person-img {
+        display: block;
+        height: 602px;
+        width: 323px;
+        margin: 0 auto;
+    }
+
+    .cloud {
+        position: absolute;
+        display: none;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .container:hover .cloud:nth-child(1) {
+        display: block;
+    }
+
+    .container:hover .cloud:nth-child(2) {
+        display: block;
+        width: 15px;
+        height: 15px;
+    }
+
+    .container:hover .cloud:nth-child(3) {
+        display: block;
+        width: 25px;
+        height: 25px;
+    }
+
+    .container:hover .cloud:nth-child(4) {
+        display: block;
+        width: 35px;
+        height: 35px;
+    }
+
+    .container:hover .cloud:nth-child(5) {
+        display: block;
+        width: 45px;
+        height: 45px;
+    }
+
+    .text-cloud {
+        display: none;
+        width: auto;
+        height: auto;
+        max-width: 200px;
+        padding: 35px;
+        text-align: center;
+        line-height: 1.4;
+        font-family: Andale Mono, monospace
+    }
+
+    .container:hover .text-cloud {
+        display: block;
+    }
+</style>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная 4
+    </header>
+
+    <main>
+        <div class="container">
+            <img src="qq.jpg" alt="Person Image" class="person-img">
+            <div class="cloud" style="top: 53%; left: 50%;"></div>
+            <div class="cloud" style="top: 48%; left: 46%;"></div>
+            <div class="cloud" style="top: 43%; left: 42%;"></div>
+            <div class="cloud" style="top: 37%; left: 38%;"></div>
+            <div class="cloud text-cloud" style="top: 9%; left: 25%;">qq</div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Юрин Семён, ФБИ-24, 2 курс, 2024
+    </footer>
+</body>
+</html>
