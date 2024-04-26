@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юрин Семён Андреевич. Круги</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon/favicon-16x16.png">
+    <link rel="icon" href="../favicon/favicon-32x32.png">
+</head>
+<script>
+    function hideCircle(circle) {
+            circle.style.transition = "all 0.5s";
+            circle.style.opacity = "0";
+            circle.style.width = "0";
+            circle.style.height = "0";
+    }
+    function showAllCircles() {
+            let circles = document.querySelectorAll('.circles');
+            circles.forEach(circle => {
+                circle.style.transition = "all 0.5s";
+                circle.style.opacity = "1";
+                circle.style.width = "45px";
+                circle.style.height = "45px";
+        });
+    }
+</script>
+<style>
+    .container {
+            position: absolute;
+        }
+    .circles {
+        position: absolute;
+        display: none;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid black;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+        transition: opacity 0.5s ease;
+        cursor: pointer;
+    }
+    .circles:nth-child(1) {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-color: green;
+    }
+
+    .circles:nth-child(2) {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-color: purple;
+    }
+
+    .circles:nth-child(3) {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-color: yellow;
+    }
+
+    .circles:nth-child(4) {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-color: lightblue;
+    }
+
+    .circles:nth-child(5) {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-color: coral;
+    }
+    .circles:nth-child(6) {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-color: red;
+    }
+    .circles:nth-child(7) {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-color: pink;
+    }
+    .circles:nth-child(8) {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-color: lightgreen;
+    }
+    .circles:nth-child(9) {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-color: orange;
+    }
+    .circles:nth-child(10) {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-color: grey;
+    }
+    .text-circles {
+        display: none;
+        width: auto;
+        height: auto;
+        max-width: 200px;
+        padding: 35px;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 30px;
+    }
+    .text {
+        position: absolute;
+    }
+    .text-button {
+        margin-top: 800px;
+
+    }
+
+</style>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная 4
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="circles text-circles" style="top: 150px; left: 450px;" onclick="hideCircle(this)">1</div>
+            <div class="circles text-circles" style="top: 350px; left: 850px" onclick="hideCircle(this)">2</div>
+            <div class="circles text-circles" style="top: 70px; left: 870px;" onclick="hideCircle(this)">3</div>
+            <div class="circles text-circles" style="top: 50px; left: 1700px;" onclick="hideCircle(this)">4</div>
+            <div class="circles text-circles" style="top: 650px; left: 430px;" onclick="hideCircle(this)">5</div>
+            <div class="circles text-circles" style="top: 600px; left: 940px;" onclick="hideCircle(this)">6</div>
+            <div class="circles text-circles" style="top: 120px; left: 1150px;" onclick="hideCircle(this)">7</div>
+            <div class="circles text-circles" style="top: 450px; left: 1560px;" onclick="hideCircle(this)">8</div>
+            <div class="circles text-circles" style="top: 400px; left: 150px;" onclick="hideCircle(this)">9</div>
+            <div class="circles text-circles" style="top: 420px; left: 1200px;" onclick="hideCircle(this)">10</div>
+        <div class="text">
+            <div class="text-button">
+                <input type="button" value="Вернуть кружочки" onclick="showAllCircles()">
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        &copy; Юрин Семён, ФБИ-24, 2 курс, 2024
+    </footer>
+</body>
+</html>
