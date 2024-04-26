@@ -19,10 +19,14 @@
     let blurValue = document.getElementById('blurValue').value + 'px';
     let brightnessValue = document.getElementById('brightnessValue').value + '%';
     let contrastValue = document.getElementById('contrastValue').value + '%';
+    let grayscaleValue = document.getElementById('grayscaleValue').value + '%';
+
     document.getElementById('blurOutput').innerText = blurValue;
     document.getElementById('brightnessOutput').innerText = brightnessValue;
     document.getElementById('contrastOutput').innerText = contrastValue;
-    document.getElementById('Image').style.filter = 'blur(' + blurValue + ') brightness(' + brightnessValue + ') contrast(' + contrastValue + ')';
+    document.getElementById('grayscaleOutput').innerText = grayscaleValue;
+
+    document.getElementById('Image').style.filter = 'blur(' + blurValue + ') brightness(' + brightnessValue + ') contrast(' + contrastValue + ')grayscale(' + grayscaleValue + ')';
 }
 </script>
 <style>
@@ -46,6 +50,9 @@
             Фильтр contrast:
             <input type="range" min="0" max="500" value="100" onchange="applyFilters()()" id="contrastValue">
             <span id="contrastOutput"></span>
+            Фильтр grayscale:
+            <input type="range" min="0" max="100" value="0" onchange="applyFilters()()" id="grayscaleValue">
+            <span id="grayscaleOutput"></span><br>
         </div>
         
         <div><img src="123.jpg" id='Image' class="mountPict"></div>
