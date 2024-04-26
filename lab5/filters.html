@@ -23,6 +23,7 @@
     let huerotateValue = document.getElementById('huerotateValue').value + 'deg';
     let invertValue = document.getElementById('invertValue').value + '%';
     let saturateValue = document.getElementById('saturateValue').value + '%';
+    let sepiaValue = document.getElementById('sepiaValue').value + '%';
 
     document.getElementById('blurOutput').innerText = blurValue;
     document.getElementById('brightnessOutput').innerText = brightnessValue;
@@ -31,14 +32,15 @@
     document.getElementById('huerotateOutput').innerText = huerotateValue;
     document.getElementById('invertOutput').innerText = invertValue;
     document.getElementById('saturateOutput').innerText = saturateValue;
+    document.getElementById('sepiaOutput').innerText = sepiaValue;
 
-    document.getElementById('Image').style.filter = 'blur(' + blurValue + ') brightness(' + brightnessValue + ') contrast(' + contrastValue + ')grayscale(' + grayscaleValue + ')hue-rotate(' + huerotateValue + ')invert(' + invertValue + ')saturate(' + saturateValue + ')';
+    document.getElementById('Image').style.filter = 'blur(' + blurValue + ') brightness(' + brightnessValue + ') contrast(' + contrastValue + ')grayscale(' + grayscaleValue + ')hue-rotate(' + huerotateValue + ')invert(' + invertValue + ')saturate(' + saturateValue + ')sepia(' + sepiaValue + ')';
 }
 </script>
 <style>
     .mountPict {
-        width: 82%;
-        margin-left: 180px;
+        width: 50%;
+        margin-left: 450px;
     }
 </style>
 <body>
@@ -68,6 +70,9 @@
             Фильтр saturate:
             <input type="range" min="0" max="500" value="100" onchange="applyFilters()()" id="saturateValue">
             <span id="saturateOutput"></span><br>
+            Фильтр sepia:
+            <input type="range" min="0" max="100" value="0" onchange="applyFilters()()" id="sepiaValue">
+            <span id="sepiaOutput"></span><br>
         </div>
         
         <div><img src="123.jpg" id='Image' class="mountPict"></div>
