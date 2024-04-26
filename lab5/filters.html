@@ -22,6 +22,7 @@
     let grayscaleValue = document.getElementById('grayscaleValue').value + '%';
     let huerotateValue = document.getElementById('huerotateValue').value + 'deg';
     let invertValue = document.getElementById('invertValue').value + '%';
+    let saturateValue = document.getElementById('saturateValue').value + '%';
 
     document.getElementById('blurOutput').innerText = blurValue;
     document.getElementById('brightnessOutput').innerText = brightnessValue;
@@ -29,8 +30,9 @@
     document.getElementById('grayscaleOutput').innerText = grayscaleValue;
     document.getElementById('huerotateOutput').innerText = huerotateValue;
     document.getElementById('invertOutput').innerText = invertValue;
+    document.getElementById('saturateOutput').innerText = saturateValue;
 
-    document.getElementById('Image').style.filter = 'blur(' + blurValue + ') brightness(' + brightnessValue + ') contrast(' + contrastValue + ')grayscale(' + grayscaleValue + ')hue-rotate(' + huerotateValue + ')invert(' + invertValue + ')';
+    document.getElementById('Image').style.filter = 'blur(' + blurValue + ') brightness(' + brightnessValue + ') contrast(' + contrastValue + ')grayscale(' + grayscaleValue + ')hue-rotate(' + huerotateValue + ')invert(' + invertValue + ')saturate(' + saturateValue + ')';
 }
 </script>
 <style>
@@ -63,6 +65,9 @@
             Фильтр invert:
             <input type="range" min="0" max="100" value="0" onchange="applyFilters()()" id="invertValue">
             <span id="invertOutput"></span><br>
+            Фильтр saturate:
+            <input type="range" min="0" max="500" value="100" onchange="applyFilters()()" id="saturateValue">
+            <span id="saturateOutput"></span><br>
         </div>
         
         <div><img src="123.jpg" id='Image' class="mountPict"></div>
