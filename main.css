@@ -8,11 +8,18 @@ main{
     background-color: blueviolet;
     color: maroon;
     font-family: Impact;
+    margin: 10px 20px 131px;
 }
 footer{
     background-color: blueviolet;
     color: maroon;
     font-family: Impact;
+    font-size: 20pt;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 header{
     background-color: blueviolet;
