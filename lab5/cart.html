@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юрин Семён Андреевич. Корзина</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon/favicon-16x16.png">
+    <link rel="icon" href="../favicon/favicon-32x32.png">
+    <script>
+        function CleanHolders() {
+            let inputApl = document.getElementById('Apples');
+            inputApl.value = '';
+            let inputPear = document.getElementById('Pearses');
+            inputPear.value = '';
+            let inputOran = document.getElementById('Oranges');
+            inputOran.value = '';
+            let inputMel = document.getElementById('Melons');
+            inputMel.value = '';
+            let inputQiw = document.getElementById('Qiwi');
+            inputQiw.value = '';
+            document.getElementById('result').innerHTML = 'Сумма:';
+        }
+        function SumProducts() {
+            let inputApl = document.getElementById('Apples').value;
+            let inputPear = document.getElementById('Pearses').value;
+            let inputOran = document.getElementById('Oranges').value;
+            let inputMel = document.getElementById('Melons').value;
+            let inputQiw = document.getElementById('Qiwi').value;
+
+            let cost = inputApl * 100 + inputPear * 80 + inputOran * 150 + inputMel * 300 + inputQiw * 120
+            document.getElementById('result').innerHTML = 'Сумма: ' + cost + ' руб.';
+        }
+    </script>
+    <style>
+        #output {
+            border: 2px solid;
+            border-radius: 10px;
+            width: 300px;
+            height: 450px;
+            background-color: #8ee4af;
+        }
+        .h1 {
+            font-size: 28px;
+            padding-top: 10px;
+            text-align: center;
+        }
+        .product {
+            font-size: 17px;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .summ {
+            width: 150px;
+            margin-left: 5px;
+            margin-top: 40px;
+            height: 35px;
+            background-color: #8ee4af;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная 4
+    </header>
+    <main>
+        <div id="output">
+            <div class="h1">
+                Корзина товаров
+            </div>
+            <div class="product">
+                <label>Яблоки (100руб/шт)<br><input type="number" value="0" min="0" id="Apples"></label><br>
+                <label>Яблоки (100руб/шт)<br><input type="number" min="0" id="Apples" placeholder="Введите кол-во яблок"></label><br>
+            </div>
+            <div class="product">
+                <label>Груши (80руб/шт)<br><input type="number" min="0" id="Pearses" placeholder="Введите кол-во груш"></label><br>
+            </div>
+            <div class="product">
+                <label>Апельсины (150руб/шт)<br><input type="number" min="0" id="Oranges" placeholder="Введите кол-во апельсинов"></label><br>
+            </div>
+            <div class="product">
+                <label>Дыни (300руб/шт)<br><input type="number" min="0" id="Melons" placeholder="Введите кол-во дынь"></label><br>
+            </div>
+            <div class="product">
+                <label>Киви (120руб/шт)<br><input type="number" min="0" id="Qiwi" placeholder="Введите кол-во киви"></label><br>
+            </div>
+            <div class="buttons-container">
+                <input type="button" value="Рассчитать" onclick="SumProducts()">
+                <input type="button" value="Очистить значение" onclick="CleanHolders()">
+            </div>
+            <div class="summ" id="result">
+                Сумма: 
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; Юрин Семён, ФБИ-24, 2 курс, 2024
+    </footer>
+</body>
+</html>
