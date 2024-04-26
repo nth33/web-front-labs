@@ -19,3 +19,26 @@ header{
     color: maroon;
     font-family: Impact;
 }
+a{
+    color: green;
+    text-decoration: none;
+}
+
+a:link {
+    color:green;
+    text-decoration: none;
+}
+
+a:visited {
+    color:black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active{
+    color: black;
+    opacity: 0.8;}
