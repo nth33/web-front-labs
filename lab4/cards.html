@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юрин Семён Андреевич. Карточки</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon/favicon-16x16.png">
+    <link rel="icon" href="../favicon/favicon-32x32.png">
+</head>
+<style>
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -15px;
+    }
+    .card {
+        width: 15%;
+        height: 300px;
+        background-color: rgb(185, 236, 185);
+        border: 1px darkgreen;
+        margin: 50px;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .card__text {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .card__image {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+    }
+    .card__footer {
+        text-align: right;
+    }
+</style>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная 4
+    </header>
+    <main>
+        <div class="card-container">
+            <div class="card">
+                <div class="card__text">Сотовый телефон DEXP C185 черный</div>
+                <img src="1.jpg" alt="Изображение1" class="card__image">
+                <div class="card__footer">Стоимость: 750 ₽</div>
+            </div>
+            <div class="card">
+                <div class="card__text">Сотовый телефон F+ F170L голубой</div>
+                <img src="2.jpg" alt="Изображение2" class="card__image">
+                <div class="card__footer">Стоимость: 850₽</div>
+            </div>
+            <div class="card">
+                <div class="card__text">Сотовый телефон INOI 241 черный</div>
+                <img src="3.jpg" alt="Изображение3" class="card__image">
+                <div class="card__footer">Стоимость: 899₽</div>
+            </div>
+            <div class="card">
+                <div class="card__text">Сотовый телефон INOI 100 (2021) черный</div>
+                <img src="4.jpg" alt="Изображение4" class="card__image">
+                <div class="card__footer">Стоимость: 950₽</div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card__text">Сотовый телефон teXet TM-122 черный</div>
+                <img src="flower5.jpg" alt="Изображение5" class="card__image">
+                <div class="card__footer">Стоимость: 950₽</div>
+            </div>
+            <div class="card">
+                <div class="card__text">Сотовый телефон FinePower SR283 черный</div>
+                <img src="6.jpg" alt="Изображение6" class="card__image">
+                <div class="card__footer">Стоимость: 1050₽</div>
+            </div>
+            <div class="card">
+                <div class="card__text">Сотовый телефон F+ F240L голубой</div>
+                <img src="7.jpg" alt="Изображение7" class="card__image">
+                <div class="card__footer">Стоимость: 1099₽</div>
+            </div>
+            <div class="card">
+                <div class="card__text">Сотовый телефон Maxvi C27 черный</div>
+                <img src="8.jpg" alt="Изображение8" class="card__image">
+                <div class="card__footer">Стоимость: 1099₽</div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        &copy; Юрин Семён, ФБИ-24, 2 курс, 2024
+    </footer>
+</body>
+</html>
