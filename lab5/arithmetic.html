@@ -12,8 +12,8 @@
         function ShowSum() {
             let inputA = document.getElementById('numberA')
             let inputB = document.getElementById('numberB')
-            let a = parseInt(inputA.value)
-            let b = parseInt(inputB.value)
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
             let result = a + b;
             alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
         }
@@ -42,16 +42,23 @@
             alert('Умножение ' + a + ' и ' + b + ' равна ' + result);
         }
         function ShowAuthor() {
-            let author = 'Автор страницы:\nЮрин Семён Андреевич'
-            alert(author)
+            let author = 'Автор страницы:\nЮрин Семён Андреевич';
+            alert(author);
         }
         function ClickFooter() {
-            let text = 'Приветствую вас на моей странице!'
-            alert(text)
+            let text = 'Приветствую вас на моей странице!';
+            alert(text);
         }  
+        function ChangeOutput(buttonNum, backColor, textColor, borderColor) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.border = '1px solid ' + borderColor;
+        }
     </script>
     <style>
-        .message {
+        .message1 {
             width: 300px;
             height: 50px;
             padding-top: 25px;
@@ -60,7 +67,68 @@
             text-align: center;
             cursor: pointer;
             display: inline-block;
-
+            position: absolute;
+            top: 220px;
+        }
+        .message2 {
+            width: 300px;
+            height: 50px;
+            padding-top: 25px;
+            background-color: #8ee4af;;
+            border: 3px solid green;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            top: 320px;
+        }
+        .message3 {
+            width: 300px;
+            height: 50px;
+            padding-top: 25px;
+            background-color: #8ee4af;;
+            border: 3px solid green;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            top: 420px;
+        }
+        .message4 {
+            width: 300px;
+            height: 50px;
+            padding-top: 25px;
+            background-color: #8ee4af;;
+            border: 3px solid green;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            top: 520px;
+        }
+        .message5 {
+            width: 300px;
+            height: 50px;
+            padding-top: 25px;
+            background-color: #8ee4af;;
+            border: 3px solid green;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            top: 220px;
+            left: 350px;
+        }
+        header {
+            cursor: pointer;
+        }
+        footer {
+            cursor: pointer;
+        }
+         #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
         }
     </style>
 </head>
@@ -73,11 +141,19 @@
         <div class="message" onclick="ShowSum()">Сколько будет 5154+7891?</div>
         <label>Первое число: <input type="number" value="5184" id="numberA"></label><br>
         <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
-        <div class="message" onclick="ShowSum()">Найти сумму чисел</div>>
-        <div class="message" onclick="ShowRaz()">Найти разность чисел</div>>
-        <div class="message" onclick="ShowUmn()">Найти умножение чисел</div>>
-        <div class="message" onclick="Showdel()">Найти деление чисел</div>>
-        <div class="message">Узнать, кто автор страницы</div>
+        <div class="message1" onclick="ShowSum()">Найти сумму чисел</div>>
+        <div class="message2" onclick="ShowRaz()">Найти разность чисел</div>>
+        <div class="message3" onclick="ShowUmn()">Найти умножение чисел</div>>
+        <div class="message4" onclick="ShowDel()">Найти деление чисел</div>>
+        <div class="message5">Узнать, кто автор страницы</div>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="ChangeOutput(1, 'red', 'yellow', 'black')">
+            <input type="button" value="Кнопка 2" onclick="ChangeOutput(2, 'black', 'lime', 'black')">
+            <input type="button" value="Кнопка 3" onclick="ChangeOutput(3, 'lightblue', 'purple', 'black')">
+            <input type="button" value="Кнопка 4" onclick="ChangeOutput(4, 'green', 'black', 'black')">
+        </div>
+        <br><div id="output"></div>
     </main>
 
     <footer>
